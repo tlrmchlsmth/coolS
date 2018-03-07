@@ -1,0 +1,56 @@
+% \def\fileversion{0.1}
+% \def\filedate{\today}
+% \def\docdate{\today}
+%
+% \MakeShortVerb{\|}
+%
+% \title{The $\coolS$ from Middle School}
+% \author{Tyler Michael Smith}
+% \date{\filedate}
+% \maketitle
+%
+% \section{Introduction}
+% This package makes this symbol $\coolS$ in math mode with the command |\coolS|.
+%
+%
+% \section{Code}
+%
+%\begin{macrocode}
+%<*driver>
+\documentclass[12pt,a4paper]{ltxdoc}
+\usepackage{a4,ifthen,mflogo,coolS,amssymb,amsmath}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\EnableCrossrefs
+\RecordChanges
+\CodelineIndex
+\makeindex
+\begin{document}
+\DocInput{coolS.dtx}
+\end{document}
+%</driver>
+%\end{macrocode}
+%
+%\begin{macrocode}
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{coolS}
+  [2018/03/07 v0.1 (c) Tyler Michael Smith <tyler.smith@inf.ethz.ch>]
+%    \end{macrocode}
+%
+%\section{More code}
+% 
+%\begin{macrocode}
+\DeclareFontFamily{U}{coolSs}{}
+\DeclareFontShape{U}{coolSs}{m}{n}{ <-> coolS }{}
+\DeclareSymbolFont{COOLS}{U}{coolSs}{m}{n}
+\DeclareMathSymbol{\coolS}{\mathalpha}{COOLS}{'101}
+%\end{macrocode}
+%
+%    \begin{macrocode}
+\endinput
+%    \end{macrocode}
+% \Finale
+%
+\section{Acknowledgements}
+% Adapted from the skull package at \url{https://ctan.org/pkg/skull} by Henrik Christian Grove.
+% Makefile adapted from the package at \url{https://github.com/elmar-peise/drawmatrix} by Elmar Peise.
