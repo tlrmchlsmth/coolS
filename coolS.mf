@@ -6,35 +6,35 @@ define_pixels(u);
 
 %beginchar("A",1.5u#,1.4u#,0.4u#);
 %beginchar("A",1u#,1.0u#,0);
-beginchar("A", 7pt#, 12pt#, .08u);
+beginchar("A", 6.25pt#, 12pt#, .08u);
   %pickup pencircle scaled .01u;
   %filldraw (0,0) --- (0,1u) -- (.5u,1u) -- (.5u,0) -- cycle;
   %
   pickup pencircle scaled .06u
 
   %Draw bottom 3 vertical lines
-  draw (0.00u, .15u - .08u) --- (0.0u, .25u + .15u - .08u);
-  draw (0.25u, .15u - .08u) --- (0.25u, .25u + .15u - .08u);
-  draw (0.50u, .15u - .08u) --- (0.5u, .25u + .15u - .08u);
+  draw (0.00u + .0125u, .15u - .08u) --- (0.0u + .0125u, .25u + .15u - .08u);
+  draw (0.25u + .0125u, .15u - .08u) --- (0.25u + .0125u, .25u + .15u - .08u);
+  draw (0.50u + .0125u, .15u - .08u) --- (0.5u + .0125u, .25u + .15u - .08u);
 
   %Draw top 3 vertical lines
-  draw (0.00u, .15u + .25u + .20u - .08u) --- (0.0u,  1u - .15u - .08u);
-  draw (0.25u, .15u + .25u + .20u - .08u) --- (0.25u,  1u - .15u - .08u);
-  draw (0.50u, .15u + .25u + .20u - .08u) --- (0.5u,  1u - .15u - .08u);
+  draw (0.00u + .0125u, .15u + .25u + .20u - .08u) --- (0.0u + .0125u,  1u - .15u - .08u);
+  draw (0.25u + .0125u, .15u + .25u + .20u - .08u) --- (0.25u + .0125u,  1u - .15u - .08u);
+  draw (0.50u + .0125u, .15u + .25u + .20u - .08u) --- (0.5u + .0125u,  1u - .15u - .08u);
 
   %Draw top and bottom diagonal lines
-  draw (0.0u,  .15u - .08u) -- (0.25u, 0u - .08u) -- (0.5u, .15u - .08u);
-  draw (0.0u, 1u - .15u - .08u) -- (0.25u, 1u - .08u) -- (0.5u, 1u - .15u - .08u);
+  draw (0.0u + .0125u,  .15u - .08u) -- (0.25u + .0125u, 0u - .08u) -- (0.5u + .0125u, .15u - .08u);
+  draw (0.0u + .0125u, 1u - .15u - .08u) -- (0.25u + .0125u, 1u - .08u) -- (0.5u + .0125u, 1u - .15u - .08u);
 
   %Draw middle diagonal lines
   %The ones that connect top 3 lines to bottom 3 lines
-  draw (0.00u, .15u + .25u + .20u - .08u) -- (0.25u, .15u + .25u - .08u);
-  draw (0.25u, .15u + .25u + .20u - .08u) -- (0.5u, .15u + .25u - .08u);
+  draw (0.00u + .0125u, .15u + .25u + .20u - .08u) -- (0.25u + .0125u, .15u + .25u - .08u);
+  draw (0.25u + .0125u, .15u + .25u + .20u - .08u) -- (0.5u + .0125u, .15u + .25u - .08u);
 
   %Draw partial middle diagonal lines
   %The ones that connect to the midpoint of the diagonal lines we just drew
-  draw (0.0u, .15u + .25u - .08u) -- (0.125u, .15u + .25u + .1u - .08u);
-  draw (0.5u, .15u + .25u + .20u - .08u) -- (0.375u, .15u + .25u + .1u - .08u);
+  draw (0.0u + .0125u, .15u + .25u - .08u) -- (0.125u + .0125u, .15u + .25u + .1u - .08u);
+  draw (0.5u + .0125u, .15u + .25u + .20u - .08u) -- (0.375u + .0125u, .15u + .25u + .1u - .08u);
 endchar;
 
 bye.
